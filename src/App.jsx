@@ -7,8 +7,6 @@ import { useState } from 'react'
 export default function App() {
   const [valueInput, setvalueInput] = useState("lyon");
   const city = valueInput;
-  console.log("value app",valueInput);
-  console.log("city",city);
   return (
     <Context.Provider value={{city,setvalueInput}}>
       <div className="App">

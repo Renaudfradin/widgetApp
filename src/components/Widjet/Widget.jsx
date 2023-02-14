@@ -10,7 +10,6 @@ import { useState } from "react";
 
 export default function Widget(){
   const { city } = useContext(Context);
-  console.log(city)
   const [dataWeather, setdataWeather] = useState([]);
   const [weather, setWeather] = useState([]);
   const [main, setMain] = useState([])
