@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function SearchBox(){
-  const [inputeValue,setInputeValue] = useState("");
-
+export default function SearchBox({valueInput,setvalueInput}){
   function handleChange(event){
-    setInputeValue(event.target.value);
-    console.log(inputeValue)
+    setvalueInput(event.target.value);
+    console.log(valueInput)
   }
-
 
   return(
     <Box
@@ -20,7 +17,7 @@ export default function SearchBox(){
       noValidate
       autoComplete="off"
     >
-      <TextField id="filled-basic" label="Filled" variant="filled" value={inputeValue} onChange={handleChange}/>
+      <TextField id="filled-basic" label="Enter city" variant="filled" value={valueInput} onChange={handleChange} type="text"/>
     </Box>
   )
 }
